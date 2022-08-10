@@ -1,0 +1,230 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
+<!--  Last Published: Wed Aug 10 2022 06:40:51 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="5ec3535b4bad9b083c66a855" data-wf-site="5cecdea15d0f47d2e0a5affc">
+<head>
+  <meta charset="utf-8">
+  <title>Machine and Space</title>
+  <meta content="Machine and Space" property="og:title">
+  <meta content="Machine and Space" property="twitter:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/xiaobai.webflow.css" rel="stylesheet" type="text/css">
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+  <script type="text/javascript">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-167053996-1', 'auto');ga('send', 'pageview');</script>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body class="body">
+  <div class="dynamicbackgroundblock">
+    <div class="mainbackground"></div>
+    <div class="dynamicbackground w-embed w-script">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script defer="">
+const container = document.querySelector(".mainbackground");
+function newGradientTop() {
+  var c1 = {
+        r: Math.floor(255),
+        g: Math.floor(35+Math.random()*220),
+        b: Math.floor(Math.random()*55)
+      };
+  var c2 = {
+        r: Math.floor(255),
+        g: Math.floor(35+Math.random()*220),
+        b: Math.floor(Math.random()*85)
+      };
+  var c3 = {
+        r: Math.floor(255),
+        g: Math.floor(35+Math.random()*220),
+        b: Math.floor(Math.random()*85)
+      };
+  var c4 = {
+        r: Math.floor(255),
+        g: Math.floor(35+Math.random()*220),
+        b: Math.floor(Math.random()*85)
+      };
+  c1.rgb = 'rgb('+c1.r+','+c1.g+','+c1.b+')';
+  c2.rgb = 'rgb('+c2.r+','+c2.g+','+c2.b+')';
+  c3.rgb = 'rgb('+c3.r+','+c3.g+','+c3.b+')';
+  c4.rgb = 'rgb('+c4.r+','+c4.g+','+c4.b+')';
+  return 'radial-gradient(at top left, '+c1.rgb+', '+c2.rgb+', '+c3.rgb+', '+c4.rgb+')';
+}
+function rollBg() {
+  container.style.background = newGradientTop();
+  container.style.opacity = 0.12;
+}
+rollBg();
+/*
+$(document).on("click", function () {
+        rollBg();
+});
+*/
+document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
+    </div>
+    <div class="differentcursor2 w-embed w-script">
+      <div id="mouse-circle"></div>
+      <style>
+Body{
+	cursor: None;
+}
+::selection {color: #444444; background: #f7ff59;}
+#mouse-circle {
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    margin: -18px 0px 0px -18px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    pointer-events: none !important;
+    box-shadow: 0 0 16px rgba(255, 255, 255, 0);
+    z-index: 999;
+}
+</style>
+      <script>
+(function() {
+  var follower, init, mouseX, mouseY, positionElement, timer;
+  follower = document.getElementById('mouse-circle');
+  mouseX = (event) => {
+    return event.clientX;
+  };
+  mouseY = (event) => {
+    return event.clientY;
+  };
+  positionElement = (event) => {
+    var mouse;
+    mouse = {
+      x: mouseX(event),
+      y: mouseY(event)
+    };
+    follower.style.top = mouse.y + 'px';
+    return follower.style.left = mouse.x + 'px';
+  };
+  timer = false;
+  window.onmousemove = init = (event) => {
+    var _event;
+    _event = event;
+    return timer = setTimeout(() => {
+      return positionElement(_event);
+    }, 0);
+  };
+}).call(this);
+</script>
+    </div>
+  </div>
+  <div data-collapse="small" data-animation="over-right" data-duration="300" data-w-id="a11c9795-8204-bf87-7258-c54144ee835e" data-easing="ease" data-easing2="ease" role="banner" class="navigation w-nav">
+    <div class="navigation-items">
+      <div class="text-block">Xiaobai Ji | Portfolio</div>
+      <div>
+        <a href="index.html" class="link-block-6 w-inline-block">
+          <div class="text-block-4">啸</div>
+        </a>
+      </div>
+      <div class="navigation-wrap">
+        <nav role="navigation" class="navigation-items w-nav-menu">
+          <a href="doodle.html" class="navigation-item w-nav-link">Other</a>
+        </nav>
+        <div class="menu-button w-nav-button"><img src="images/menu-icon_1menu-icon.png" width="22" alt="" class="menu-icon"></div>
+      </div>
+      <div class="div-block-98"></div>
+    </div>
+  </div>
+  <div class="herosectionphoto wf-section"><img src="images/machine_cover.png" sizes="80vw" srcset="images/machine_cover-p-500.png 500w, images/machine_cover-p-800.png 800w, images/machine_cover-p-1080.png 1080w, images/machine_cover.png 1200w" alt="" class="image-15"></div>
+  <div class="pageframework w-clearfix">
+    <div class="mainbody wf-section">
+      <div class="columns-2 w-row">
+        <div class="column-7 w-col w-col-4">
+          <div class="logomask"><img src="images/machine_logo.svg" width="75" height="75" alt="" class="projectlogo"></div>
+          <h1 class="appname">Machine and Space</h1>
+          <p class="introtext">Art Installation Design</p>
+        </div>
+        <div class="w-col w-col-8">
+          <h4 class="introtextheading _1 left">Intro</h4>
+          <p class="introtext">This project uses Rhino and Grasshopper, a coding platform in 3D modelling software, to generate forms of an art installation and its running mechanisms. With these tools been used, components can be pre-fabricated in the wood shop before been transported to the exhibition site and be assembled in a short period of time and relatively high accuracy.<br>‍<br>The installation changes the way our roof behave by waving itself. It was supposed to be powered by electricity during exhibition but due to fire code changed to human powered. The running mechanism of the dynamic roof was kept unchanged.</p>
+        </div>
+      </div>
+      <div class="columns-3 w-row">
+        <div class="w-col w-col-3">
+          <h4 class="introtextheading _1">Role</h4>
+          <p class="introtext middle">Designing, Coding, Pre-fabricating</p>
+        </div>
+        <div class="w-col w-col-3">
+          <h4 class="introtextheading _1">location</h4>
+          <p class="introtext middle">Southeast University</p>
+        </div>
+        <div class="w-col w-col-3">
+          <h4 class="introtextheading _1">Toolkits</h4>
+          <p class="introtext middle">Rhino, Grasshopper, Python</p>
+        </div>
+        <div class="w-col w-col-3">
+          <h4 class="introtextheading _1">Duration</h4>
+          <p class="introtext middle">1 month</p>
+        </div>
+      </div>
+      <div class="_50pxdivide"></div>
+      <h1 class="sectionheading">background</h1>
+      <div class="columns-3 w-row">
+        <div class="column w-col w-col-2"></div>
+        <div class="column w-col w-col-8">
+          <h4 class="introtextheading _1">What I do</h4>
+          <p class="introtext middle _1">Led brainstorm and design of an interactive installation art with six designers<br><br>Created digital simulation and presented<br><br>Led the construction process through computer-aided pre-fabricated components<br></p>
+        </div>
+        <div class="w-col w-col-2"></div>
+      </div>
+      <div class="_50pxdivide"></div>
+    </div>
+    <div data-w-id="0efdc15f-f901-58d5-3225-87bfa25f7608" class="rightnavigation">
+      <a href="#01.-Exploded-Axonometric" class="rightnavigationtextline w-inline-block">
+        <div class="rightnavigationdot"></div>
+        <h6 class="heading-11">Exploded axonometric</h6>
+      </a>
+      <a href="#02.-Unit-Structure-Mechanisms" class="rightnavigationtextline w-inline-block">
+        <div class="rightnavigationdot"></div>
+        <h6 class="heading-11">Unit structure &amp; mechanisms</h6>
+      </a>
+      <a href="#03.-Layers-of-the-Installation" class="rightnavigationtextline w-inline-block">
+        <div class="rightnavigationdot"></div>
+        <h6 class="heading-11">Layers of installation</h6>
+      </a>
+      <a href="#04.-Final-Presentation" class="rightnavigationtextline w-inline-block">
+        <div class="rightnavigationdot"></div>
+        <h6 class="heading-11">Final presentation</h6>
+      </a>
+    </div>
+    <div class="mainbody wf-section">
+      <div class="div-block-14"></div>
+      <h1 id="01.-Exploded-Axonometric" class="sectionheading">Exploded Axonometric</h1><img src="images/Machine-and-Space-1.png" loading="lazy" sizes="(max-width: 767px) 80vw, (max-width: 991px) 70vw, (max-width: 1439px) 76vw, 80vw" srcset="images/Machine-and-Space-1-p-500.png 500w, images/Machine-and-Space-1-p-800.png 800w, images/Machine-and-Space-1-p-1080.png 1080w, images/Machine-and-Space-1-p-1600.png 1600w, images/Machine-and-Space-1.png 2000w" alt="">
+    </div>
+    <div class="_100pxdivide"></div>
+    <div class="mainbody wf-section">
+      <h1 id="02.-Unit-Structure-Mechanisms" class="sectionheading">Unit Structure &amp; Mechanisms</h1><img src="images/Machine-and-Space-2.png" loading="lazy" sizes="80vw" srcset="images/Machine-and-Space-2-p-500.png 500w, images/Machine-and-Space-2-p-800.png 800w, images/Machine-and-Space-2-p-1080.png 1080w, images/Machine-and-Space-2-p-1600.png 1600w, images/Machine-and-Space-2.png 2000w" alt="">
+    </div>
+    <div class="_100pxdivide"></div>
+    <div class="mainbody wf-section">
+      <h1 id="03.-Layers-of-the-Installation" class="sectionheading">Layers of the Installation</h1><img src="images/Machine-and-Space-3.png" loading="lazy" sizes="80vw" srcset="images/Machine-and-Space-3-p-500.png 500w, images/Machine-and-Space-3-p-800.png 800w, images/Machine-and-Space-3-p-1080.png 1080w, images/Machine-and-Space-3-p-1600.png 1600w, images/Machine-and-Space-3.png 2000w" alt="">
+    </div>
+    <div class="_100pxdivide"></div>
+    <div class="mainbody wf-section">
+      <h1 id="04.-Final-Presentation" class="sectionheading">Final Presentation</h1><img src="images/Machine-and-Space-4.png" loading="lazy" sizes="80vw" srcset="images/Machine-and-Space-4-p-500.png 500w, images/Machine-and-Space-4-p-800.png 800w, images/Machine-and-Space-4-p-1080.png 1080w, images/Machine-and-Space-4-p-1600.png 1600w, images/Machine-and-Space-4.png 2000w" alt="">
+      <div class="_50pxdivide"></div>
+      <div class="w-embed"><img src="https://xiaobai-ji.github.io/Machine-Space/assets/simulation.gif" alt="" class="image-19"></div>
+      <div class="_50pxdivide"></div>
+      <div class="w-embed"><img src="https://xiaobai-ji.github.io/Machine-Space/assets/video.gif" alt="" class="image-19"></div>
+      <div class="_50pxdivide"></div>
+    </div>
+  </div>
+  <div data-w-id="9bfd1ac1-0b69-454c-06a8-53c71d954aa0" class="footer-wrap">
+    <div class="footer-links"><img src="images/logo2-01.png" loading="lazy" alt="" class="image-85"></div>
+    <div class="wf-section">
+      <p class="introtext right">© 2022 Xiaobai</p>
+      <p class="introtext right">All rights reserved</p>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5cecdea15d0f47d2e0a5affc" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+</body>
+</html>
